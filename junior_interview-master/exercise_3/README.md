@@ -10,11 +10,13 @@ Pensa a come struttureresti il database di questa applicazione e carica un'immag
 ___________________________________________________________________________________________________
 
 - USER -> id_primary / nome / cognome / email / pasword / remember_token /created at / update at
-- ALBUM -> id_primary / created at / update at / DESCRIPTION / IMG_PATH
-- FOTO -> id_primary / created at / update at / DESCRIPTION / IMG_PATH
+- VIAGGIO -> id_primary / user_id / name(NULL) / created at / update at / description(NULL) 
+- ALBUM -> id_primary / viaggio_id / created at / update at / description / IMG_PATH(NULL)
+- FOTO -> id_primary / album_id / created at / update at / DESCRIPTION / IMG_PATH
 
 (relazion):
--USER * <-> 1 ALBUM
+-USER * <-> 1 VIAGGIO
+-VIAGGIO * <-> 1 ALBUM
 -ALBUM * <-> * FOTO
 -TABELLA_PONTE_ALBUM_FOTO
 
