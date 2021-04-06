@@ -1,0 +1,3 @@
+# README #
+
+Segui i vari esercizi presenti nelle cartelle del repository... 
